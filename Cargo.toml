@@ -1,0 +1,13 @@
+[package]
+name = "tracing-json-fmt-repro"
+version = "0.1.0"
+authors = ["Dan Burkert <dan@danburkert.com>"]
+edition = "2018"
+
+[dependencies]
+opentelemetry = { version = "0.4", default-features = false, features = [ "trace" ]}
+opentelemetry-jaeger = "0.3"
+tracing = {version = "0.1", features = ["log"] }
+tracing-futures = "0.2"
+tracing-opentelemetry = "0.3"
+tracing-subscriber = { version = "0.2", default-features = false, features = ["env-filter", "json", "fmt"] }
